@@ -80,7 +80,7 @@ class ProxyTransport(xmlrpclib.Transport):
         '''Send xml-rpc request using proxy'''
         #We get a traceback if we don't have this attribute:
         self.verbose = verbose
-        url = 'http://' + host + handler
+        url = 'https://' + host + handler
         request = urllib2.Request(url)
         request.add_data(request_body)
         # Note: 'Host' and 'Content-Length' are added automatically
